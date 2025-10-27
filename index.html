@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+  (function(){
+    var segs = location.pathname.split('/').filter(Boolean);
+    var pagename = segs.length ? segs[0] : '';
+    var prefix = pagename ? '/' + pagename : '';
+    var target = prefix + '/logos/doodles/2021/halloween21/v81123/halloween21.html';
+    // Update href text for fallback link, then redirect.
+    document.addEventListener('DOMContentLoaded', function(){
+      var a = document.getElementById('fallback');
+      if(a) a.href = target;
+      location.replace(target);
+    });
+  })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a id="fallback" href="#">/logos/doodles/2021/halloween21/v81123/halloween21.html</a> — if the redirect doesn't work, click the link.</p>
+</body>
+</html>
